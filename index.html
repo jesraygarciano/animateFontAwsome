@@ -12,6 +12,7 @@
         #chain, #battery, #hourglass{
             font-size: 4rem;
         }
+        
 </style>
 <body>
     
@@ -85,14 +86,27 @@
     hourglass.innerHTML = "&#x251";
 
     function hourGlass(){
-        hourglass.innerHTML = "&#x251";
+        hourglass.innerHTML = "&#x254";
+
+        setTimeout(function(){
+            hourglass.innerHTML = "&#x252";
+        },1000);
 
         setTimeout(function(){
             hourglass.innerHTML = "&#x253";
-        },1000)
+        },2000);
+
+        setTimeout(function(){
+            hourglass.innerHTML = "&#x255";
+        },2000);
+
+
     }
 
+    hourGlass();
 
+    setInterval(hourGlass, 5000);
+    
 </script>
 
 </body>
