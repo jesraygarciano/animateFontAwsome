@@ -17,7 +17,14 @@
     
 <div id="chain" class="fa"></div>
 
+<br />
+<br />
+
+<div id="battery" class="fa"></div>
+
 <script>
+
+    // Break chain Animation function
     function breakChain(){
         let chain = document.getElementById('chain');
         chain.innerHTML = "&#xf0c1";
@@ -29,9 +36,16 @@
 
     }
 
+    // Call Animation
     breakChain();
 
+    // Animate Every 2 seconds
     setInterval(breakChain, 2000);
+
+    // Battery Charge Animation
+    function chargeBattery{
+
+    }
 
 </script>
 
