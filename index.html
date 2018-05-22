@@ -9,7 +9,7 @@
 </head>
 
 <style>
-        #chain{
+        #chain, #battery, #hourglass{
             font-size: 4rem;
         }
 </style>
@@ -21,6 +21,10 @@
 <br />
 
 <div id="battery" class="fa"></div>
+<br />
+<br />
+
+<div id="hourglass" class="fa"></div>
 
 <script>
 
@@ -43,9 +47,51 @@
     setInterval(breakChain, 2000);
 
     // Battery Charge Animation
-    function chargeBattery{
+    function chargeBattery(){
+        let battery = 
+        document.getElementById('battery');
+        battery.innerHTML = "&#xf244";
+        
+        setTimeout(function(){
+            battery.innerHTML = "&#xf243";
+        },1000);
+
+        setTimeout(function(){
+            battery.innerHTML = "&#xf242";
+        },2000);
+
+        setTimeout(function(){
+            battery.innerHTML = "&#xf241";
+        },3000);
+
+        setTimeout(function(){
+            battery.innerHTML = "&#xf240";
+        },4000);
 
     }
+
+    // Run Animation
+    chargeBattery();
+
+    setInterval(chargeBattery,5000);
+
+
+    // &#x251;
+    // &#x252;
+    // &#x253;
+
+    let hourglass = 
+    document.getElementById('hourglass');
+    hourglass.innerHTML = "&#x251";
+
+    function hourGlass(){
+        hourglass.innerHTML = "&#x251";
+
+        setTimeout(function(){
+            hourglass.innerHTML = "&#x253";
+        },1000)
+    }
+
 
 </script>
 
